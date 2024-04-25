@@ -2,7 +2,20 @@
 
 Este repositorio contiene las tareas realizadas para la asignatura "Desenvolvemento web en contorno cliente".
 
-## Tarea Actual: Tarea UD05
+## Tarea Actual: Tarea UD06
+
+### Comentarios
+
+Se realiza el script solicitado para la resolución de la tarea.
+
+Consideraciones de implementación: 
+- Se utiliza una variable global "pindatoActivo" para controlar si se está pintando sobre la tabla o no.
+- Se utiliza una variable global "colorSeleccionado" para saber en todo momento el color que está seleccionado en la paleta de colores.
+- En caso de que falle la validación para varios campos el foco del formulario irá al último campo en el que ha fallado la validación.
+- Al boton limpiar se le añaden funcionalidades para que además de limpiar los campos del formulario, tambien borre los errores e intentos de pantalla, además de reiniciar el contador de intentos a 0.
+
+
+## Tarea UD05
 
 ### Comentarios
 
@@ -55,8 +68,6 @@ Consideraciones de implementación:
 - Campo Hora de visita con formato incorrecto (introduciendo formato hh:mm:ss).
 
   ![image](https://github.com/PabloTaber/DWCC-Tareas/assets/137113370/14fddc8c-c12f-48fc-b9b4-c8821404f1cd)
-
-
 
 
 ## Tarea:  UD2.2
