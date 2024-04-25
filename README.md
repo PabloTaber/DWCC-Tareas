@@ -8,10 +8,14 @@ Este repositorio contiene las tareas realizadas para la asignatura "Desenvolveme
 
 Se realiza el script solicitado para la resolución de la tarea.
 
+![image](https://github.com/PabloTaber/DWCC-Tareas/assets/137113370/0817f934-b40f-4c22-a287-434dd1e3fee5)
+
 Consideraciones de implementación: 
 - Se utiliza una variable global "pindatoActivo" para controlar si se está pintando sobre la tabla o no.
 - Se utiliza una variable global "colorSeleccionado" para saber en todo momento el color que está seleccionado en la paleta de colores.
 - Se utilizan constantes para los valores por defecto de la tabla.
+
+
 
 
 ## Tarea UD05
