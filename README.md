@@ -11,8 +11,7 @@ Se realiza el script solicitado para la resolución de la tarea.
 Consideraciones de implementación: 
 - Se utiliza una variable global "pindatoActivo" para controlar si se está pintando sobre la tabla o no.
 - Se utiliza una variable global "colorSeleccionado" para saber en todo momento el color que está seleccionado en la paleta de colores.
-- En caso de que falle la validación para varios campos el foco del formulario irá al último campo en el que ha fallado la validación.
-- Al boton limpiar se le añaden funcionalidades para que además de limpiar los campos del formulario, tambien borre los errores e intentos de pantalla, además de reiniciar el contador de intentos a 0.
+- Se utilizan constantes para los valores por defecto de la tabla.
 
 
 ## Tarea UD05
