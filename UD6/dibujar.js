@@ -1,7 +1,14 @@
-/***** FUNCIONES PARA DIBUJAR LA TABLA *****/
+/***** CONSTANTES *****/
+const NUMERO_FILAS = 30;
+const NUMERO_COLUMNAS = 30;
+const ESTILO_TABLA = 'tablerodibujo';
+const TITULO_TABLA = 'Haga CLICK en cualquier celda para activar/desactivar el Pincel';
 
-// Función para crear la tabla
-const crearTabla = () => {
+/***** FUNCIONES PARA CREAR LA TABLA *****/
+
+// Función para crear la tabla, acepta el numero de filas, columnas y estilo a aplicar.
+// Devuelve una tabla.
+const crearTabla = (numeroFilas, numeroColumnas, estilo) => {
     // Crear la tabla
     let tabla = document.createElement('table');
 
@@ -9,49 +16,49 @@ const crearTabla = () => {
     tabla.id = 'tabla';
 
     // Añadir la clase para aplicar los estilos CSS
-    tabla.classList.add('tablerodibujo');
+    tabla.classList.add(estilo);
     
     //Crear el titulo de la tabla y asignarlo
     let titulo = document.createElement('caption');
-    titulo.textContent = 'Haga CLICK en cualquier celda para activar/desactivar el Pincel'; 
+    titulo.textContent = TITULO_TABLA; 
     tabla.appendChild(titulo);
 
     // Generar las filas y celdas
-    for (let i = 0; i < 30; i++) {
-        let fila = document.createElement('tr');
-        
-        for (let j = 0; j < 30; j++) {
-            let celda = document.createElement('td');
-            celda.classList.add('tablerodibujo'); //aplicar el estilo
-            fila.appendChild(celda);   
-        }
-
+    for (let i = 0; i < numeroFilas; i++) {
+        let fila = crearFila(numeroColumnas);        
         tabla.appendChild(fila);
     }
-
-    // Agregar la tabla al cuerpo del documento
-    document.body.appendChild(tabla);
 
     return tabla;
 }
 
-// Función para limpiar la zona de dibujo
-const limpiarZonaDibujo = () => {
-    let zonaDibujo = document.getElementById('zonadibujo');
-    zonaDibujo.innerHTML = '';
+
+// Función para crear una celda, acepta un estilo a aplicar como parametro de entrada.
+// Devuelve una celda con el estilo aplicado.
+const crearCelda = (estilo) => {
+    let celda = document.createElement('td');
+    celda.classList.add(estilo); //aplicar el estilo
+
+    return celda;
 }
+
+// Función para crear una fila, acepta el numero de celdas que componen la fila.
+// Devuelve un fila con el numero de celdas solicitado.
+const crearFila = (numeroCeldas) => {
+    let fila = document.createElement('tr');
+        
+        for (let j = 0; j < numeroCeldas; j++) {
+            let celda = crearCelda('tablerodibujo');
+            fila.appendChild(celda);   
+        }
+
+    return fila
+} 
 
 // Función para agregar la tabla a la zona de dibujo
-const agregarTablaAZonaDibujo = (tabla) => {
+const dibujarTabla = (tabla) => {
     let zonaDibujo = document.getElementById('zonadibujo');
     zonaDibujo.appendChild(tabla);
-}
-
-// Función para crear la tabla y dibujarla
-const dibujarTabla = () => {
-    const tabla = crearTabla();
-    limpiarZonaDibujo();
-    agregarTablaAZonaDibujo(tabla);
 }
 
 /***** FUNCIONES PARA GESTIONAR EVENTOS DE LA TABLA *****/
@@ -147,11 +154,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const primeraCeldaPaleta = document.getElementById('paleta').getElementsByTagName('td')[0];
     colorSeleccionado = window.getComputedStyle(primeraCeldaPaleta).getPropertyValue('background-color');
 
-    dibujarTabla();
+    //Crear tabla e imprimirla por pantalla.
+    let tabla = crearTabla(NUMERO_FILAS, NUMERO_COLUMNAS, ESTILO_TABLA);
+    dibujarTabla(tabla);
+    
+    //Incorporar eventos.
     agregarEventosClicPaleta();
     agregarEventosClicTabla();
     agregarEventosMovimientoTabla();
-    
 });
 
 
