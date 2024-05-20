@@ -1,4 +1,7 @@
-// Código de validaciones del formulario
+//Evento para asegurar que está cargado todo el DOM antes de ejecutar el código js
+document.addEventListener("DOMContentLoaded", function () {
+
+/***** Código de validaciones del formulario *****/ 
 
 //Patrones para las validaciones
 let patronNombre = /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü\s]{1,20}$/;
@@ -10,11 +13,11 @@ let patronTelefono = /^\d{9}$/;
 
 /***** FUNCIONES DE VISUALIZACIÓN INFORMACIÓN ******/
 
-//Función que agrega los errores del formulario al id error para despues mostrarlos
+//Función que agrega los errores del formulario al id error para despues mostrarlos todos juntos.
 function agregarErrores(mensaje) {
-    const errors = document.getElementById("error");
-    if (errors) {
-      errors.innerHTML += `<p>${mensaje}</p>`;
+    const errores = document.getElementById("error");
+    if (errores) {
+      errores.innerHTML += `<p>${mensaje}</p>`;
     } 
   }
 
@@ -150,8 +153,7 @@ const validarFormulario = (e) => {
 }
 
 
-// Envio de datos con XMLHttpRequest
-
+/***** Envio de datos con XMLHttpRequest *****/ 
 
 const enviarFormulario = () => {
     //Obtener los datos del formulario
@@ -179,13 +181,11 @@ const enviarFormulario = () => {
 }
 
 
-/***** Eventos *****/
-document.addEventListener("DOMContentLoaded", function () {
+/***** EVENTOS *****/
 
-    const enviar = document.getElementById("enviar");
+const enviar = document.getElementById("enviar");
 
-
-    enviar.addEventListener("click", validarFormulario);
+enviar.addEventListener("click", validarFormulario);
 
 
 })

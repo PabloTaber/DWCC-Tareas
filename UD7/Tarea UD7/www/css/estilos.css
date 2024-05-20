@@ -82,6 +82,7 @@ h3 {
   border-radius: 7px;
 }
 
+/* Estilos para el nuevo div que muestra errores de validación */
 #error-validacion {
   width: 95%;
   max-width: 500px;
