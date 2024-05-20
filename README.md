@@ -2,7 +2,34 @@
 
 Este repositorio contiene las tareas realizadas para la asignatura "Desenvolvemento web en contorno cliente".
 
-## Tarea Actual: Tarea UD06
+## Tarea Actual: Tarea UD07
+
+### Comentarios
+
+Para realizar la tarea, he optado por utilizar un contenedor [Docker-LAMP](https://github.com/jersonmartinez/docker-lamp) disponible en GitHub. He clonado este contenedor en la carpeta "Tarea UD7" dentro del directorio correspondiente a esta unidad.
+
+Consideraciones de implementación:
+- Se modifica el fichero index.html para añadir un DIV donde mostrar los errores de validación.
+- Se añaden estilos para este nuevo DIV en el fichero estilos.css.
+- En cuanto al fichero app.js:
+  - Se utilizan patrones para validar todos los campos del formulario.
+  - Cada vez que se intenta enviar el formulario se validan todos los campos y se muestran todos los errores en el DIV habilitado para ello.
+  - Para enviar la petición al servidor se crea una cadena de texto con todos los campos a enviar. 
+
+### Capturas de pantalla
+
+- Envío del formulario correcto
+  
+  ![image](https://github.com/PabloTaber/DWCC-Tareas/assets/137113370/bc34af5e-9430-46b0-af49-d1e8b5852319)
+
+- Ejemplos de errores en la validación por datos mal introducidos
+
+  ![image](https://github.com/PabloTaber/DWCC-Tareas/assets/137113370/25b0556d-893e-4743-a5e6-40021dca68d5)
+
+
+
+
+## Tarea UD06
 
 ### Comentarios
 
