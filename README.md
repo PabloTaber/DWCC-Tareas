@@ -22,10 +22,13 @@ Consideraciones de implementación:
   
   ![image](https://github.com/PabloTaber/DWCC-Tareas/assets/137113370/bc34af5e-9430-46b0-af49-d1e8b5852319)
 
-- Ejemplos de errores en la validación por datos mal introducidos
+- Ejemplos de errores en la validación por datos por formato incorrecto
 
   ![image](https://github.com/PabloTaber/DWCC-Tareas/assets/137113370/25b0556d-893e-4743-a5e6-40021dca68d5)
 
+- Ejemplo de errores en la validación por falta de datos
+
+  ![image](https://github.com/PabloTaber/DWCC-Tareas/assets/137113370/ad38c691-2af3-4c5f-99d9-2f206f77bc9a)
 
 
 
